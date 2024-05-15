@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Scrolling exploration</title>
+  
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+  <script>
+    $(function() {
+      $("#help-toggle").click(function() {
+        $("#wrapper").toggleClass("help-closed");
+      });
+      $("#nav-toggle").click(function() {
+        $("#wrapper").toggleClass("nav-closed");
+      });
+    });
+  </script>
+
+  <style>
+    body {
+      background-color: aquamarine;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    #wrapper.nav-closed {
+      margin-left: 0;
+    }
+    .nav-closed nav {
+      margin-left: -256px;
+    }
+    #wrapper.help-closed {
+      margin-right: 0;
+    }
+    .help-closed aside {
+      margin-right: -320px;
+    }
+
+    aside,
+    nav {
+      transition: .25s linear;
+    }
+
+      #wrapper {
+        display: flex;
+        flex-direction: row;
+        min-height: 100vh;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: 256px;
+        margin-right: 320px;
+      }
+        nav {
+          flex-grow: 0;
+          flex-shrink: 0;
+          position: fixed;
+          left: 0;
+          top: 0;
+          overflow-y: scroll;
+          bottom: 0;
+          width: 256px;
+        }
+          nav ul {
+            padding: 0;
+          }
+          nav li {
+            list-style-type: none;
+            padding: 8px 16px;
+          }
+        main {
+          display: flex;
+          flex-grow: 1;
+          justify-content: center;
+          padding-bottom: 24px;
+        }
+          #content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            max-width: 1200px;
+            padding: 0;
+            position: relative; 
+          }
+            header {
+              background-color: aquamarine;
+              display: flex;
+              flex-grow: 0;
+              flex-direction: column;
+              position: sticky;
+              top: 0;
+              left: 24px;
+              right: 24px;
+              z-index: 20;
+            }
+            #global {
+              display: flex;
+              flex-grow: 0;
+              flex-direction: row;
+              padding: 8px 0px;
+            }
+              #environments {
+                flex-grow: 1;
+                padding-top: 14px;
+                padding-left: 16px;
+              }
+            #local {
+              background-color: white;
+              border-radius: 16px 16px 0 0;
+              font-size: 20px;
+              font-weight: 600;
+              border-bottom: 1px solid #ccc;
+              padding: 20px 16px 19px;
+            }
+            #card {
+              background: white;
+              border-radius: 0 0 16px 16px;
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
+              padding: 0;
+              position: relative;
+              padding: 24px;
+            }
+              .cards {
+                display: grid;
+                /* grid-template-columns: 1fr 1fr 1fr; */
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-gap: 24px;
+                align-items: stretch;
+              }
+              .tiling-card {
+                border: 1px solid #ccc;
+                border-radius: 12px;
+                padding: 16px;
+              }
+                .tiling-card strong {
+                  display: block;
+                  font-size: 18px;
+                  margin-bottom: 8px;
+                }
+        aside {
+          flex-grow: 0;
+          flex-shrink: 0;
+          position: fixed;
+          right: 0;
+          top: 0;
+          overflow-y: scroll;
+          bottom: 0;
+          width: 320px;
+        }
+          aside p {
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+    #help-toggle,
+    #nav-toggle {
+      border-radius: 100px;
+      padding: 12px;
+      height: 24px;
+      width: 24px;
+    }
+    #help-toggle:hover,
+    #nav-toggle:hover {
+      cursor: pointer;
+      background: rgba(0,0,0,.12);
+    }
+  </style>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+  
+  <div id="wrapper">
+    <nav>
+      <ul>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+        <li>Nav item</li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="content">
+        <header>
+          <div id="global">
+            <a id="nav-toggle"><span class="material-symbols-outlined">menu</span></a>
+            <div id="environments">Environments</div>
+            <a id="help-toggle"><span class="material-symbols-outlined">help</span></a>
+          </div>
+          <div id="local">Card title</div>
+        </header>
+        <div id="card">
+          <div class="cards">
+
+            <div class="tiling-card">
+              <strong>Card title</strong>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla massa, consequat nec tempor ut, ultrices vitae felis.</span>
+            </div>
+
+            <div class="tiling-card">
+              <strong>Card title</strong>
+              <span>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus nec orci sed dui luctus tempor aliquet ut elit.</span>
+            </div>
+
+            <div class="tiling-card">
+              <strong>Card title</strong>
+              <span>Proin dignissim commodo eros in auctor. Praesent nec magna magna. Aenean mollis euismod sem, iaculis mollis orci. Quisque fringilla erat sit amet libero maximus volutpat. Nunc rhoncus erat id massa laoreet</span>
+            </div>
+
+            <div class="tiling-card">
+              <strong>Card title</strong>
+              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla massa, consequat nec tempor ut, ultrices vitae felis.</span>
+            </div>
+
+            <div class="tiling-card">
+              <strong>Card title</strong>
+              <span>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus nec orci sed dui luctus tempor aliquet ut elit.</span>
+            </div>
+
+            <div class="tiling-card">
+              <strong>Card title</strong>
+              <span>Proin dignissim commodo eros in auctor. Praesent nec magna magna. Aenean mollis euismod sem, iaculis mollis orci. Quisque fringilla erat sit amet libero maximus volutpat. Nunc rhoncus erat id massa laoreet</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <aside>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla massa, consequat nec tempor ut, ultrices vitae felis. Donec gravida convallis justo, dictum aliquam ante blandit ac. Aenean tempor velit eros, id dignissim justo aliquet a. Ut non metus at magna euismod posuere. Integer non tortor vulputate, mattis lorem in, pellentesque risus. Etiam ac posuere dolor. Morbi commodo tristique sapien a sagittis. Vivamus ut elit lacus. Pellentesque sodales, diam et lacinia posuere, massa ante ultrices enim, quis pretium lectus nunc ac mauris. Donec nec turpis pharetra, egestas turpis eget, molestie sapien. Nam nisi justo, pharetra bibendum vulputate at, cursus et turpis. Proin egestas odio a lobortis sollicitudin. Donec efficitur ultricies sagittis. Aenean nunc mi, porta at velit non, rutrum mattis dui.</p>
+
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Phasellus nec orci sed dui luctus tempor aliquet ut elit. In ac orci volutpat, pharetra nulla ac, elementum justo. Duis mattis leo a metus elementum interdum. Fusce ac nibh vehicula, pretium nibh ac, malesuada nulla. Sed ut mi euismod, laoreet enim at, imperdiet leo. Aliquam eu bibendum justo. Pellentesque tempor volutpat faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <p>Proin dignissim commodo eros in auctor. Praesent nec magna magna. Aenean mollis euismod sem, iaculis mollis orci. Quisque fringilla erat sit amet libero maximus volutpat. Nunc rhoncus erat id massa laoreet, bibendum suscipit sem sollicitudin. Morbi vel augue laoreet, tristique mauris ut, bibendum orci. Nam cursus fermentum magna. Duis venenatis lorem sit amet dui luctus, in congue nibh maximus. Pellentesque blandit viverra risus. Integer a urna id felis pharetra faucibus vitae id libero. Ut malesuada arcu vitae purus dapibus, a pellentesque mi maximus. Etiam in purus suscipit, fermentum turpis id, blandit orci. Pellentesque ultrices mi quis ultrices bibendum.</p>
+
+      <p>Phasellus varius nisl eu leo sollicitudin, eget porta mi pharetra. Mauris interdum dui nec risus egestas, sit amet ultrices lectus congue. Morbi faucibus libero vitae rutrum tincidunt. Fusce scelerisque consectetur ipsum quis semper. Ut posuere nisl odio, vitae mattis dolor euismod in. Ut laoreet, ligula sit amet pharetra imperdiet, augue metus aliquam leo, sit amet egestas libero dui quis tellus. Etiam vestibulum quam sit amet placerat venenatis. Sed convallis, lectus nec congue sodales, neque mauris commodo ante, non consequat justo nulla ac elit. Phasellus augue orci, egestas eget volutpat non, scelerisque at lorem. Proin mattis iaculis urna, ut pretium risus lobortis quis. Sed facilisis quam quis tortor sodales, id fermentum mi commodo. Donec tellus lacus, pharetra vitae venenatis maximus, aliquet semper sem.</p>
+      
+    </aside>
+
+  </div>
+
+</body>
+</html>
