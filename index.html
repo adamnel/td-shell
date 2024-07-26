@@ -28,8 +28,15 @@
         // Handle expanding/collapsing nested lists
         if ($listItem.hasClass('expands')) {
           event.preventDefault();
-          $listItem.toggleClass('expanded');
-          $listItem.children('ul').slideToggle();
+
+          if ($('#wrapper').hasClass('nav-closed')) {
+            $listItem.addClass('expanded');
+            var $firstInnerLink = $listItem.find('ul a').first();
+            $clickedLink = $firstInnerLink;
+          } else {
+            $listItem.toggleClass('expanded');
+            $listItem.children('ul').slideToggle();
+          }
         }
 
         // Handle active class
@@ -45,6 +52,7 @@
       });
       $("#nav-toggle").click(function() {
         $("#wrapper").toggleClass("nav-closed");
+        $(".active-child").addClass("expanded");
       });
     });
   </script>
