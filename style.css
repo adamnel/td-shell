@@ -91,9 +91,26 @@
 
 body {
   background-color: var(--cv-theme-surface-container-low);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cv-theme-on-surface-variant);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  line-height: 1.5;
   margin: 0;
 }
+  body::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 4px solid var(--cv-theme-color-logo);
+    z-index: 1001;
+  }
 
   #wrapper {
     display: flex;
@@ -111,6 +128,7 @@ body {
       display: flex;
       flex-grow: 1;
       justify-content: center;
+      padding-top: 4px;
       padding-bottom: var(--cv-spacing-lg);
     }
       #content {
@@ -140,16 +158,17 @@ body {
         }
           #environments {
             flex-grow: 1;
-            padding-top: 14px;
+            padding-top: 11px;
             padding-left: var(--cv-spacing-md);
           }
         #local {
           background-color: var(--cv-theme-surface-container-lowest);
           border-radius: var(--cv-spacing-md) var(--cv-spacing-md) 0 0;
+          color: var(--cv-theme-on-surface);
           font-size: 20px;
           font-weight: 600;
           border-bottom: 1px solid var(--cv-theme-outline-variant);
-          padding: 20px var(--cv-spacing-md) 19px;
+          padding: 17px var(--cv-spacing-md) 16px;
         }
         #card {
           background:  var(--cv-theme-surface-container-lowest);
@@ -174,6 +193,7 @@ body {
             padding: var(--cv-spacing-md);
           }
             .tiling-card strong {
+              color: var(--cv-theme-on-surface);
               display: block;
               font-size: 18px;
               margin-bottom: var(--cv-spacing-sm);
@@ -237,7 +257,7 @@ nav {
   flex-shrink: 0;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 4px;
   overflow-y: scroll;
   bottom: 0;
   width: 256px;
@@ -476,7 +496,7 @@ aside {
   flex-shrink: 0;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 4px;
   overflow-y: scroll;
   bottom: 0;
   width: 320px;
