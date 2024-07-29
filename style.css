@@ -338,6 +338,9 @@ nav {
       -o-transition: opacity var(--cv-transition-duration) var(--cv-transition-timing);
       transition: opacity var(--cv-transition-duration) var(--cv-transition-timing);
     }
+    nav li a span:last-of-type {
+      min-width: 164px; // Prevents content jumping during resize
+    }
     nav li a:hover {
       background-color: var(--cv-theme-on-surface-8);
     }
@@ -501,9 +504,24 @@ aside {
   bottom: 0;
   width: 320px;
 }
+  aside header {
+    color: var(--cv-theme-on-surface);
+    font-size: 20px;
+    padding: 17px var(--cv-spacing-lg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .help-content {
+    padding-top: 64px;
+  }
   aside p {
     padding-left: var(--cv-spacing-lg);
     padding-right: var(--cv-spacing-lg);
+  }
+  aside p:first-of-type {
+    margin-top: 0;
   }
 
 #wrapper.help-closed {
