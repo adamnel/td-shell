@@ -90,7 +90,7 @@
 }
 
 body {
-  background-color: var(--cv-theme-surface-container-low);
+  background-color: var(--cv-theme-surface);
   color: var(--cv-theme-on-surface-variant);
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-optical-sizing: auto;
@@ -140,7 +140,7 @@ body {
         position: relative; 
       }
         main header {
-          background-color: var(--cv-theme-surface-container-low);
+          background-color: var(--cv-theme-surface);
           display: flex;
           flex-grow: 0;
           flex-direction: column;
@@ -374,7 +374,7 @@ nav {
       content: '';
       display: block;
       position: absolute;
-      border: solid 5px var(--cv-theme-on-surface);
+      border: solid 5px var(--cv-theme-on-surface-variant);
       border-left-color: rgba(0,0,0,0);
       border-right-color: rgba(0,0,0,0);
       border-bottom-width: 0;
