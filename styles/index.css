@@ -1,77 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/@covalent/components@8.17.1/theme/prebuilt/light-theme.css");
+
 :root {
-  --cv-theme-primary: rgb(140 74 93);
-  --cv-theme-on-primary: rgb(255 255 255);
-  --cv-theme-primary-container: rgb(255 217 225);
-  --cv-theme-on-primary-container: rgb(58 7 27);
-
-  --cv-theme-secondary: rgb(0 35 60);
-  --cv-theme-on-secondary: rgb(255 255 255);
-  --cv-theme-secondary-container: rgb(222 234 250);
-  --cv-theme-on-secondary-container: rgb(0 29 51);
-  --cv-theme-on-secondary-container-8: rgba(0, 29, 51, .08);
-
-  --cv-theme-tertiary: rgb(123 87 52);
-  --cv-theme-on-tertiary: rgb(255 255 255);
-  --cv-theme-tertiary-container: rgb(255 220 191);
-  --cv-theme-on-tertiary-container: rgb(45 22 0);
-
-  --cv-theme-error: rgb(186 26 26);
-  --cv-theme-on-error: rgb(255 255 255);
-  --cv-theme-error-container: rgb(255 218 214);
-  --cv-theme-on-error-container: rgb(65 0 2);
-
-  --cv-theme-background: rgb(248 249 251);
-  --cv-theme-on-background: rgb(248 249 251);
-
-  --cv-theme-surface: rgb(248 249 251);
-  --cv-theme-on-surface: rgb(0 35 60);
-  --cv-theme-on-surface-8: rgba(0, 35, 60, .08);
-  --cv-theme-surface-variant: rgb(248 249 251);
-  --cv-theme-on-surface-variant: rgb(89 98 123);
-
-  --cv-theme-outline: rgb(132 115 118);
-  --cv-theme-outline-variant: rgb(214 194 197);
-
-  --cv-theme-shadow: rgb(0 0 0);
-  --cv-theme-scrim: rgb(0 0 0);
-
-  --cv-theme-inverse-surface: rgb(56 46 48);
-  --cv-theme-inverse-on-surface: rgb(254 237 239);
-  --cv-theme-inverse-primary: rgb(255 177 197);
-
-  --cv-theme-primary-fixed: rgb(255 217 225);
-  --cv-theme-on-primary-fixed: rgb(58 7 27);
-  --cv-theme-primary-fixed-dim: rgb(255 177 197);
-  --cv-theme-on-primary-fixed-variant: rgb(112 51 70);
-
-  --cv-theme-secondary-fixed: rgb(255 217 225);
-  --cv-theme-on-secondary-fixed: rgb(43 21 27);
-  --cv-theme-secondary-fixed-dim: rgb(227 189 197);
-  --cv-theme-on-secondary-fixed-variant: rgb(91 63 70);
-
-  --cv-theme-tertiary-fixed: rgb(255 220 191);
-  --cv-theme-on-tertiary-fixed: rgb(45 22 0);
-  --cv-theme-tertiary-fixed-dim: rgb(238 189 146);
-  --cv-theme-on-tertiary-fixed-variant: rgb(97 64 30);
-
-  --cv-theme-surface-dim: rgb(224 227 239);
-  --cv-theme-surface-bright: rgb(248 249 251);
-  --cv-theme-surface-container-lowest: rgb(255 255 255);
-  --cv-theme-surface-container-low: rgb(243 245 249);
-  --cv-theme-surface-container: rgb(239 241 247);
-  --cv-theme-surface-container-high: rgb(235 237 245);
-  --cv-theme-surface-container-highest: rgb(230 233 243);
-
-  --cv-theme-outline: rgb(114 125 156);
-  --cv-theme-outline-variant: rgb(209 213 231);
-
-  --cv-theme-color-logo: rgba(255, 95, 2, 1);
-
-  /* Typography */
-  --cv-font-weight-regular: 400;
-  --cv-font-weight-medium: 500;
-  --cv-font-weight-semibold: 600;
-
+  --cv-theme-color-logo: #ff5f02;
+  
   /* Spacing */
   --cv-spacing-xs: 4px;
   --cv-spacing-sm: 8px;
@@ -118,10 +49,10 @@ body {
     min-height: 100vh;
     margin-left: 256px;
     margin-right: 320px;
-    -webkit-transition: margin var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: margin var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: margin var(--cv-transition-duration) var(--cv-transition-timing);
-    transition: margin var(--cv-transition-duration) var(--cv-transition-timing);
+    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+    transition: all var(--cv-transition-duration) var(--cv-transition-timing);
   }
 
     main {
@@ -198,6 +129,19 @@ body {
               font-size: 18px;
               margin-bottom: var(--cv-spacing-sm);
             }
+          #card .page-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            text-align: center;
+          }
+          .content-home #card .page-content-home {
+            display: flex;
+          }
+          #card .page-content .material-symbols-outlined {
+            font-size: 80px;
+          }
 
 
 
@@ -265,19 +209,19 @@ nav {
 }
   nav header {
     padding: var(--cv-spacing-sm) 12px;
-    -webkit-transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
-    transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
+    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+    transition: all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #logo {
     position: absolute;
     top: 20px;
     left: 65px;
-    -webkit-transition: top var(--cv-transition-duration) var(--cv-transition-timing), left var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: top var(--cv-transition-duration) var(--cv-transition-timing), left var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: top var(--cv-transition-duration) var(--cv-transition-timing), left var(--cv-transition-duration) var(--cv-transition-timing);
-    transition: top var(--cv-transition-duration) var(--cv-transition-timing), left var(--cv-transition-duration) var(--cv-transition-timing);
+    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+    transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     cursor: pointer;
   }
     #logo svg {
@@ -309,6 +253,10 @@ nav {
   }
   nav ul ul {
     margin: 0 0 0 36px;
+    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+    transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   nav li {
     list-style-type: none;
@@ -327,16 +275,16 @@ nav {
       padding: 0 var(--cv-spacing-md) 0 0;
       position: relative;
       text-align: left;
-      -webkit-transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
-      transition: padding var(--cv-transition-duration) var(--cv-transition-timing);
+      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+      transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li a span {
-      -webkit-transition: opacity var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: opacity var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: opacity var(--cv-transition-duration) var(--cv-transition-timing);
-      transition: opacity var(--cv-transition-duration) var(--cv-transition-timing);
+      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
+      transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li a span:last-of-type {
       min-width: 164px; // Prevents content jumping during resize
@@ -380,7 +328,7 @@ nav {
       border-bottom-width: 0;
       width: 0;
       right: var(--cv-spacing-lg);
-      transition: transform 150ms var(--cv-transition-timing);  
+      transition: all 150ms var(--cv-transition-timing);  
     }
     nav li.expands.expanded > a:before { 
       -ms-transform: rotate(180deg);
@@ -388,16 +336,15 @@ nav {
     }
     nav li.expands > ul {
       display: none;
-      transition: transform 100ms var(--cv-transition-timing); 
+      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
+      transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li.expands.expanded > ul {
       display: block;
       max-height: 500px;
       overflow: hidden;
-      -webkit-transition: max-height var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: max-height var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: max-height var(--cv-transition-duration) var(--cv-transition-timing);
-      transition: max-height var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li li a {
       font-weight: 500;
