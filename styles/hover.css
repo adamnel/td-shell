@@ -479,9 +479,15 @@ aside {
     right: 0;
     top: 0;
   }
+  aside h3,
+  aside h4 {
+    color: var(--cv-theme-on-surface);
+  }
   .help-content {
     padding-top: 64px;
   }
+  aside h3,
+  aside h4,
   aside p {
     padding-left: var(--cv-spacing-lg);
     padding-right: var(--cv-spacing-lg);

@@ -1,6 +1,6 @@
 $(function() {
     var timer;
-    var delay = 2000;
+    var delay = 1500;
 
     $('nav').hover(function() {
         timer = setTimeout(function() {
