@@ -12,6 +12,7 @@ $(function() {
     });
 
     $('#wrapper > nav').delegate('a:not("#nav-toggle")', 'click', function(event) {
+      clearTimeout(timer);
       var $clickedLink = $(this);
       var $listItem = $clickedLink.closest('li');
 

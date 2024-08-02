@@ -49,9 +49,6 @@ body {
     min-height: 100vh;
     margin-left: 256px;
     margin-right: 320px;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing);
   }
 
@@ -221,40 +218,25 @@ nav {
   bottom: 0;
   width: 256px;
   color: var(--cv-theme-on-surface-variant);
-  -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-  -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-  -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing); 
 }
   nav header {
     padding: var(--cv-spacing-sm) 12px;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #logo {
     position: absolute;
     top: 20px;
     left: 65px;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     cursor: pointer;
   }
     #logo svg {
       height: 20px;
-      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
       transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     }
       #logo svg path {
         fill: var(--cv-theme-color-logo);
-        -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-        -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-        -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
         transition: all var(--cv-transition-duration) var(--cv-transition-timing);
       }
   nav .divider {
@@ -265,16 +247,10 @@ nav {
   nav ul {
     margin: 0 12px var(--cv-spacing-sm) 12px;
     padding: 0;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   nav ul ul {
     margin: 0 0 0 36px;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   nav li {
@@ -294,15 +270,9 @@ nav {
       padding: 0 var(--cv-spacing-md) 0 0;
       position: relative;
       text-align: left;
-      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
       transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li a span {
-      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing);
       transition: all var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li a span:last-of-type {
@@ -323,7 +293,7 @@ nav {
       font-variation-settings: 'FILL' 1;
       animation: fill-in var(--cv-transition-duration) 1;
     }
-    nav li.active-child .material-symbols-outlined {
+    #wrapper:not(.nav-closed) nav li.active-child .material-symbols-outlined {
       color: var(--cv-theme-on-secondary-container);
     }
     nav li.active-child > a:first-of-type:hover:after,
@@ -355,9 +325,6 @@ nav {
     }
     nav li.expands > ul {
       display: none;
-      -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-      -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-      -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
       transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     }
     nav li.expands.expanded > ul {
@@ -370,7 +337,7 @@ nav {
       min-height: 32px;
       padding-left: var(--cv-spacing-md)
     }
-      nav li li a span {
+      nav li li a span:last-of-type {
         min-width: 152px;
       }
     nav li a .material-symbols-outlined {
@@ -378,6 +345,10 @@ nav {
       padding: 12px;
       height: var(--cv-spacing-lg);
       border-radius: var(--cv-spacing-lg);
+    }
+
+    nav li.active-child ul .material-symbols-outlined {
+      display: none;
     }
 
 
@@ -432,28 +403,68 @@ nav .divider {
   margin-left: 12px;
   margin-right: 12px;
 }
-.nav-closed nav {
+#wrapper.nav-closed:not(.hovering) nav {
   /* margin-left: -256px; */
   width: 72px;
 }
-  .nav-closed #navigation {
+  #wrapper.nav-closed:not(.hovering) #navigation {
     padding-top: 48px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
-  .nav-closed nav li a span:last-of-type {
+  #wrapper.nav-closed:not(.hovering) nav li a span:last-of-type {
     opacity: 0;
   }
+  /* .nav-closed nav li.active-child .material-symbols-outlined {
+    display: none;
+  } */
   .nav-closed nav li li a {
     padding-left: var(--cv-spacing-sm);
   }
-  .nav-closed nav li.expands > a:before {
+  #wrapper.nav-closed:not(.hovering) nav li.expands > a:before {
     content: none;
   }
-  .nav-closed nav li.expands.expanded > ul {
+  #wrapper.nav-closed:not(.hovering) nav li.expands.expanded > ul {
     max-height: 0;
   }
-  .nav-closed nav li.active-child > a:first-of-type {
+  #wrapper.nav-closed:not(.hovering) nav li.active-child > a:first-of-type {
     background-color: var(--cv-theme-secondary-container);
     color: var(--cv-theme-on-secondary-container);
+    display: none;
+  }
+
+
+  nav li ul .material-symbols-outlined {
+    display: none;
+  }
+  #wrapper.nav-closed:not(.hovering) nav li.active-child ul .material-symbols-outlined {
+    display: block;
+  }
+  #wrapper.nav-closed:not(.hovering) nav #navigation > li:not(.active-child) {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  #wrapper.nav-closed:not(.hovering) nav li.active-child.expands.expanded {
+    border: 1px solid var(--cv-theme-on-surface-12);
+    /* background-color: var(--cv-theme-surface-container-lowest); */
+    border-radius: var(--cv-border-radius-full);
+    padding: 4px;
+  }
+  
+  #wrapper.nav-closed:not(.hovering) nav li.active-child.expands.expanded > a:first-of-type {
+    background-color: transparent;
+    color: var(--cv-theme-on-surface-variant);
+  }
+  #wrapper.nav-closed:not(.hovering) nav li.active-child.expands.expanded > ul {
+    display: block;
+    margin-inline-start: 0;
+    max-height: none;
+  }
+  .nav-closed nav li.active-child.expands.expanded li a {
+    padding-left: 0;
+  }
+  #wrapper.nav-closed:not(.hovering) nav li.active-child.expands.expanded a span:last-of-type {
+    display: none;
   }
 
 
@@ -527,61 +538,37 @@ aside {
   height: 20px;
   left: 49px;
   top: 24px;
-  -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-  -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-  -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
 }
 #wrapper.nav-closed.hovering nav #logo svg path {
   fill: var(--cv-theme-color-logo);
-  -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-  -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-  -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
 }
   #wrapper.nav-closed.hovering nav #logo svg .letters {
     display: initial;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #wrapper.nav-closed.hovering nav #logo svg .dot {
     transform: translateX(0);
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
 
 
   #wrapper.nav-closed.hovering nav #navigation {
     padding-top: 0;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #wrapper.nav-closed.hovering nav li a span:last-of-type {
     opacity: 1;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #wrapper.nav-closed.hovering nav li.expands.expanded > ul {
     max-height: none;
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #wrapper.nav-closed.hovering nav li.active-child > a:first-of-type {
     background-color: var(--cv-theme-on-surface-8);
     color: var(--cv-theme-on-surface-variant);
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
 
@@ -595,9 +582,6 @@ aside {
     bottom: 0;
     right: 0;
     background-color: var(--cv-theme-on-surface-8);
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #wrapper.nav-closed.hovering nav li.expands > a:before {
@@ -610,9 +594,6 @@ aside {
     border-bottom-width: 0;
     width: 0;
     right: var(--cv-spacing-lg);
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
   #wrapper.nav-closed.hovering nav li.expands.expanded > a:before { 
@@ -621,8 +602,5 @@ aside {
   }
   #wrapper.nav-closed.hovering nav li li a {
     padding-left: var(--cv-spacing-md);
-    -webkit-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -moz-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
-    -o-transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
     transition: all var(--cv-transition-duration) var(--cv-transition-timing), all var(--cv-transition-duration) var(--cv-transition-timing);
   }
