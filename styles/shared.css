@@ -22,6 +22,12 @@
 
 
 
+aside a {
+  color: var(--cv-theme-primary);
+}
+
+
+
 
 body {
   background-color: var(--cv-theme-surface);
