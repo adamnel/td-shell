@@ -567,16 +567,27 @@ aside {
   width: 320px;
 }
   aside header {
+    background-color: var(--cv-theme-surface);
     color: var(--cv-theme-on-surface);
     font-size: 20px;
     padding: 17px var(--cv-spacing-lg);
-    position: absolute;
+    position: sticky;
     left: 0;
     right: 0;
     top: 0;
   }
-  .help-content {
-    padding-top: 64px;
+    /* Divider underneath help header */
+    /* aside header:after {
+      content: '';
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 0;
+      height: 1px;
+      background-color: var(--cv-theme-outline-variant);
+    } */
+  .help-content > h3 {
+    margin: 17px 0 var(--cv-spacing-md);
   }
   aside h3,
   aside h4 {
