@@ -1,18 +1,6 @@
 $(function() {
-    var timer;
-    var delay = 2000;
-
-    $('nav').hover(function() {
-        timer = setTimeout(function() {
-          $('#wrapper').addClass('hovering');
-        }, delay);
-    }, function() {
-        clearTimeout(timer);
-        $('#wrapper').removeClass('hovering');
-    });
 
     $('#wrapper > nav').delegate('a:not("#nav-toggle")', 'click', function(event) {
-      clearTimeout(timer);
       var $clickedLink = $(this);
       var $listItem = $clickedLink.closest('li');
 
