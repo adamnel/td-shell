@@ -14,6 +14,7 @@
   <title>Nav (hover)</title>
   
   <!-- Included CSS Files -->
+  <link rel="stylesheet" href="styles/shared.css" />
   <link rel="stylesheet" href="styles/hover.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,7 @@
   <![endif]-->
 
 </head>
-<body class="page-home">
+<body>
   
   <div id="wrapper">
     <nav>
@@ -53,34 +54,34 @@
       </header>
       <ul id="navigation">
         <li><a id="home" class="active"><span class="material-symbols-outlined">home</span><span>Home</span></a></li>
-        <li><a id="bird-friend"><span class="material-symbols-outlined">raven</span><span>Bird friend</span></a></li>
-        <li><a id="scary"><span class="material-symbols-outlined">skull</span><span>Scary</span></a></li>
+        <li><a id="bird-friend"><span class="material-symbols-outlined">raven</span><span>Bird friends</span></a></li>
+        <li><a id="scary"><span class="material-symbols-outlined">skull</span><span>Scary things</span></a></li>
         <li class="expands">
           <a id="games"><span class="material-symbols-outlined">crossword</span><span>Games</span></a>
           <ul>
-            <li><a id="games_overview"><span>Overview</span></a></li>
-            <li><a id="games_crosswords"><span>Crosswords</span></a></li>
-            <li><a id="games_tic-tac-toe"><span>Tic-tac-toe</span></a></li>
+            <li><a id="games_overview"><span class="material-symbols-outlined">crossword</span><span>Overview</span></a></li>
+            <li><a id="games_card"><span class="material-symbols-outlined">playing_cards</span><span>Card games</span></a></li>
+            <li><a id="games_sports"><span class="material-symbols-outlined">sports_basketball</span><span>Sports</span></a></li>
+            <li><a id="games_video"><span class="material-symbols-outlined">gamepad</span><span>Video games</span></a></li>
           </ul>
         </li>
-        <li><a id="diamond"><span class="material-symbols-outlined">diamond</span><span>Diamond</span></a></li>
+        <li><a id="diamond"><span class="material-symbols-outlined">diamond</span><span>Diamonds</span></a></li>
         <li class="expands">
           <a id="space"><span class="material-symbols-outlined">rocket_launch</span><span>Space</span></a>
           <ul>
-            <li><a id="space_overview"><span>Overview</span></a></li>
-            <li><a id="space_asteroids"><span>Asteroids</span></a></li>
-            <li><a id="space_planets"><span>Planets</span></a></li>
-            <li><a id="space_galaxies"><span>Galaxies</span></a></li>
-            <li><a id="space_stars"><span>Stars</span></a></li>
+            <li><a id="space_overview"><span class="material-symbols-outlined">rocket_launch</span><span>Overview</span></a></li>
+            <li><a id="space_orbits"><span class="material-symbols-outlined">orbit</span><span>Orbits</span></a></li>
+            <li><a id="space_planets"><span class="material-symbols-outlined">public</span><span>Planets</span></a></li>
+            <li><a id="space_satellites"><span class="material-symbols-outlined">satellite_alt</span><span>Satellites</span></a></li>
           </ul>
         </li>
         <div class="divider"></div>
         <li class="expands">
           <a id="trucks"><span class="material-symbols-outlined">fire_truck</span><span>Trucks</span></a>
           <ul>
-            <li><a id="trucks_overview"><span>Overview</span></a></li>
-            <li><a id="trucks_firetrucks"><span>Fire trucks</span></a></li>
-            <li><a id="trucks_monstertrucks"><span>Monster trucks</span></a></li>
+            <li><a id="trucks_overview"><span class="material-symbols-outlined">local_delivery</span><span>Overview</span></a></li>
+            <li><a id="trucks_firetrucks"><span class="material-symbols-outlined">fire_truck</span><span>Fire trucks</span></a></li>
+            <li><a id="trucks_monstertrucks"><span class="material-symbols-outlined">agriculture</span><span>Monster trucks</span></a></li>
           </ul>
         </li>
         <li><a id="castles"><span class="material-symbols-outlined">castle</span><span>Castles</span></a></li>
@@ -97,9 +98,205 @@
           <div id="local">Home</div>
         </header>
         <div id="card">
+          
+          <div class="page-content"></div>
+          
+          <div class="cardcontent_home_overview">
 
-          <div class="page-content page-content-home">
-            <span class="material-symbols-outlined">home</span>
+            <div class="tiling-card most-recents">
+              <header>Bird friends</header>
+              <ul>
+                <li>Chirpy</li>
+                <li>Fluffy</li>
+                <li>Peppy</li>
+                <li>Feather</li>
+                <li>Sunny</li>
+              </ul>
+              <footer><a class="button" href="bird-friend">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Scary things</header>
+              <ul>
+                <li>Dark, abandoned houses</li>
+                <li>Creepy clowns</li>
+                <li>Spiders</li>
+                <li>Ghostly apparitions</li>
+                <li>Haunted forests</li>
+              </ul>
+              <footer><a class="button" href="scary">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Games</header>
+              <ul>
+                <li>Soccer (Football)</li>
+                <li>Grand Theft Auto V</li>
+                <li>Tennis</li>
+                <li>Poker</li>
+                <li>Wii Sports</li>
+              </ul>
+              <footer><a class="button" href="games_overview">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Diamonds</header>
+              <ul>
+                <li>Cullinan Diamond (3,106 carats)</li>
+                <li>Lesedi La Rona (1,109 carats)</li>
+                <li>Excelsior Diamond (995 carats)</li>
+                <li>Star of Sierra Leone (969 carats)</li>
+                <li>Incomparable Diamond (890 carats)</li>
+              </ul>
+              <footer><a class="button" href="diamond">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Space</header>
+              <ul>
+                <li>Hubble Space Telescope</li>
+                <li>Mercury (77 million km)</li>
+                <li>Saturn (1.2 billion km)</li>
+                <li>Neptune (4.3 billion km)</li>
+                <li>Polar Orbit</li>
+              </ul>
+              <footer><a class="button" href="space_overview">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Trucks</header>
+              <ul>
+                <li>Grave Digger</li>
+                <li>El Toro Loco</li>
+                <li>Type 2 Fire Engine</li>
+                <li>Zombie</li>
+                <li>Type 4 Wildland Fire Engine</li>
+              </ul>
+              <footer><a class="button" href="trucks_overview">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Castles</header>
+              <ul>
+                <li>Windsor Castle (1070 AD)</li>
+                <li>Neuschwanstein Castle (1869 AD)</li>
+                <li>Edinburgh Castle (12th century AD)</li>
+                <li>Himeji Castle (1601 AD)</li>
+                <li>Prague Castle (870 AD)</li>
+              </ul>
+              <footer><a class="button" href="castles">View all</a></footer>
+            </div>
+
+          </div>
+
+          <div class="cardcontent_games_overview">
+
+            <div class="tiling-card most-recents">
+              <header>Card games</header>
+              <ul>
+                <li>Poker</li>
+                <li>Bridge</li>
+                <li>Blackjack</li>
+                <li>Solitaire</li>
+                <li>Rummy</li>
+              </ul>
+              <footer><a class="button" href="games_card">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Sports</header>
+              <ul>
+                <li>Soccer (Football)</li>
+                <li>Basketball</li>
+                <li>Baseball</li>
+                <li>Tennis</li>
+                <li>Cricket</li>
+              </ul>
+              <footer><a class="button" href="games_sports">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Video games</header>
+              <ul>
+                <li>Minecraft</li>
+                <li>Grand Theft Auto V</li>
+                <li>Tetris</li>
+                <li>Wii Sports</li>
+                <li>PlayerUnknown's Battlegrounds (PUBG)</li>
+              </ul>
+              <footer><a class="button" href="games_video">View all</a></footer>
+            </div>
+
+          </div>
+
+          <div class="cardcontent_space_overview">
+
+            <div class="tiling-card most-recents">
+              <header>Orbits</header>
+              <ul>
+                <li>Low Earth Orbit (LEO)</li>
+                <li>Geostationary Orbit (GEO)</li>
+                <li>Medium Earth Orbit (MEO)</li>
+                <li>Polar Orbit</li>
+                <li>Sun-Synchronous Orbit (SSO)</li>
+              </ul>
+              <footer><a class="button" href="space_orbits">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Planets nearest Earth</header>
+              <ul>
+                <li>Venus (38 million km)</li>
+                <li>Mars (55 million km)</li>
+                <li>Mercury (77 million km)</li>
+                <li>Jupiter (628 million km)</li>
+                <li>Saturn (1.2 billion km)</li>
+                <li>Uranus (2.6 billion km)</li>
+                <li>Neptune (4.3 billion km)</li>
+              </ul>
+              <footer><a class="button" href="space_planets">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Satellites</header>
+              <ul>  
+                <li>International Space Station (ISS)</li>
+                <li>Hubble Space Telescope</li>
+                <li>GPS Satellites (Global Positioning System)</li>
+                <li>Sputnik 1</li>
+                <li>GOES (Geostationary Operational Environmental Satellites)</li>
+              </ul>
+              <footer><a class="button" href="space_satellites">View all</a></footer>
+            </div>
+
+          </div>
+
+          <div class="cardcontent_trucks_overview">
+
+            <div class="tiling-card most-recents">
+              <header>Most common types of fire truck</header>
+              <ul>
+                <li>Type 1 Fire Engine (Pumper Truck)</li>
+                <li>Type 2 Fire Engine</li>
+                <li>Type 3 Wildland Fire Engine</li>
+                <li>Type 4 Wildland Fire Engine</li>
+                <li>Aerial Ladder Truck</li>
+              </ul>
+              <footer><a class="button" href="trucks_firetrucks">View all</a></footer>
+            </div>
+
+            <div class="tiling-card most-recents">
+              <header>Most successful monster trucks</header>
+              <ul>
+                <li>Grave Digger</li>
+                <li>Max-D (Maximum Destruction)</li>
+                <li>El Toro Loco</li>
+                <li>Megalodon</li>
+                <li>Zombie</li>
+              </ul>
+              <footer><a class="button" href="trucks_monstertrucks">View all</a></footer>
+            </div>
+
           </div>
 
         </div>

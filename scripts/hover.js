@@ -12,6 +12,7 @@ $(function() {
     });
 
     $('#wrapper > nav').delegate('a:not("#nav-toggle")', 'click', function(event) {
+      clearTimeout(timer);
       var $clickedLink = $(this);
       var $listItem = $clickedLink.closest('li');
 
@@ -38,27 +39,46 @@ $(function() {
       $('#content').removeClass();
       $('#content').addClass('content-' + $clickedLink.attr('id'));
 
-      if ($clickedLink.is('#logo')) {
+      if ($clickedLink.is('#logo, #home')) {
+        $('#content').removeClass();
+        $('#content').addClass('content-home');
         $('#home').addClass('active');
         $('#local').html('Home');
-        $('.page-content').html('<span class="material-symbols-outlined">home</span>');
+        $('.page-content').hide();
       }
       else if ($clickedLink.parent('li').parent().is('#navigation')) {
         $('#local').html($clickedLink.children('span:last-of-type').html());
+        $('.page-content').show();
         $('.page-content').html('<span class="material-symbols-outlined">' + $clickedLink.children('span').html() + '</span>');
       }
       else if ($clickedLink.attr('id') && $clickedLink.attr('id').endsWith('_overview')) {
         $('#local').html($clickedLink.closest('.expands').children('a:first').children('span:last-of-type').html());
-        $('.page-content').html('<span class="material-symbols-outlined">' + $clickedLink.closest('.expands').children('a:first').children('span').html() + '</span>');
+        $('.page-content').hide();
+        $('.page-content').html('<span class="material-symbols-outlined">' + $clickedLink.children('span').html() + '</span>');
       }
       else if ($clickedLink.closest('ul').parent().closest('#navigation').length > 0) {
         $('#local').html($clickedLink.children('span:last-of-type').html());
-        $('.page-content').html('<span class="material-symbols-outlined">' + $clickedLink.closest('.expands').children('a:first').children('span').html() + '</span>');
+        $('.page-content').show();
+        $('.page-content').html('<span class="material-symbols-outlined">' + $clickedLink.children('span').html() + '</span>');
       }
 
       // Add active-child class only to parent li elements with 'expands' class
       $clickedLink.parentsUntil('#navigation', 'li.expands').addClass('active-child');
     });
+
+    // Simulate nav link click from "view all" links
+    $('.tiling-card > footer').delegate('a', 'click', function(event) {
+      event.preventDefault();
+      
+      var $clickedLink = $(this);
+
+      $('#'+$clickedLink.attr('href')).click();
+
+      if ($clickedLink.attr('href').endsWith('_overview')) {
+        $('#'+$clickedLink.attr('href')).parentsUntil('#navigation', 'li.expands').addClass('expanded active-child');
+      }
+    });
+
     $("#help-toggle").click(function() {
       $("#wrapper").toggleClass("help-closed");
     });
