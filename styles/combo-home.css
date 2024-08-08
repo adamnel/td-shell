@@ -1,0 +1,72 @@
+#logo,
+#logo svg {
+    transition: none;
+}
+#home svg {
+    display: none;
+}
+
+
+.nav-closed:not(.hovering) #logo,
+.nav-closed:not(.hovering) #logo svg {
+    display: none;
+    transition: none;
+}
+
+
+.nav-closed:not(.hovering) #navigation {
+    padding-top: 0;
+}
+.nav-closed:not(.hovering) #navigation > li:first-of-type {
+    padding-bottom: 8px;
+}
+
+
+.nav-closed:not(.hovering) #home {
+    background-color: var(--cv-theme-color-logo);
+    border-radius: var(--cv-spacing-xs);
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    left: 4px;
+  }
+    .nav-closed:not(.hovering) #home:hover:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: var(--cv-theme-on-surface-8);
+    }
+    .nav-closed:not(.hovering) #home span {
+        display: none;
+    }
+    .nav-closed:not(.hovering) #home svg {
+      height: 28px;
+      display: block;
+      position: absolute;
+      left: 13px;
+      top: var(--cv-spacing-xs);
+    }
+      .nav-closed:not(.hovering) #home svg path {
+        fill: #ffffff;
+      }
+      .nav-closed:not(.hovering) #home svg .letters {
+        display: none;
+      }
+      .nav-closed:not(.hovering) #home svg .dot {
+        transform: translateX(-92px);
+      }
+
+/* Show Home icon on closed nav logo hover */
+
+/* .nav-closed:not(.hovering) #home:hover svg {
+    display: none;
+}
+.nav-closed:not(.hovering) #home:hover span.material-symbols-outlined {
+    display: block;
+    padding: 8px;
+    color: var(--cv-theme-on-tertiary);
+} */
