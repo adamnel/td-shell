@@ -72,6 +72,28 @@
 }
 
 /* Hide expanded items when hovering except for the active parent */
-/* .nav-closed.hovering .expands:not(.active-child) ul {
+.nav-closed.hovering .expands:not(.hover-expansion) ul {
   display: none;
-} */
+}
+.nav-closed.hovering .expands:not(.hover-expansion) > a:before { 
+  border-width: 5px;
+  border-bottom-width: 0;
+}
+
+
+.nav-closed.hovering nav li.expands.hover-expansion > ul {
+  display: block;
+}
+.nav-closed.hovering nav li.expands.hover-expansion > a:before {
+  border-width: 5px;
+  border-top-width: 0;
+}
+
+
+#wrapper.nav-closed.hovering nav li.active-child:not(.hover-expansion) > a:first-of-type {
+  background-color: var(--cv-theme-secondary-container);
+  color: var(--cv-theme-on-secondary-container);
+}
+#wrapper.nav-closed.hovering nav li.active-child.expands.hover-expansion > a:first-of-type .material-symbols-outlined {
+  color: var(--cv-theme-on-secondary-container);
+}

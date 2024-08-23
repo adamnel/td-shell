@@ -11,18 +11,18 @@
   <!-- Set the viewport width to device width for mobile -->
   <meta name="viewport" content="width=device-width" />
 
-  <title>Nav (hoverable)</title>
+  <title>Nav (combo home - no overview)</title>
   
   <!-- Included CSS Files -->
   <link rel="stylesheet" href="styles/shared.css" />
-  <link rel="stylesheet" href="styles/hoverable.css" />
+  <link rel="stylesheet" href="styles/combo-home-no-overview.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-  <script src="scripts/hoverable.js"></script>
+  <script src="scripts/combo-home-no-overview.js"></script>
 
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
@@ -53,13 +53,22 @@
         </a>
       </header>
       <ul id="navigation">
-        <li><a id="home" class="active" title="Home"><span class="material-symbols-outlined">home</span><span>Home</span></a></li>
+        <li><a id="home" class="active" title="Home">
+          
+          <svg viewBox="0 0 106 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="t" d="M0 2.30155H3.63859V5.66123H7.69681V8.88018H3.63859V14.5069C3.63859 15.9629 4.39343 16.4388 5.45788 16.4388H7.69681V19.6578H5.45788C1.73485 19.6578 0 18.0355 0 14.5069V2.30155Z"/>
+            <g class="letters">
+              <path d="M16.4018 19.9904C11.9239 19.9904 8.92759 17.0504 8.92759 12.6851C8.92759 8.31981 11.8676 5.32347 16.2048 5.32347C20.5419 5.32347 23.3694 8.17907 23.3694 12.5444C23.3694 12.964 23.3412 13.4118 23.2568 13.944H12.7351C13.0703 15.904 14.2754 16.8278 16.4581 16.8278C17.8296 16.8278 18.8377 16.2392 19.2292 15.4562H22.9804C22.1411 18.1711 19.7896 19.9904 16.4018 19.9904ZM12.7913 10.9784H19.5644C19.2011 9.21538 18.1366 8.3761 16.2048 8.3761C14.3855 8.3761 13.211 9.27167 12.7913 10.9784Z"/>
+            </g>
+            <path class="dot" d="M101.399 18.0585C101.399 16.9941 102.239 16.1548 103.331 16.1548C104.424 16.1548 105.263 16.9941 105.263 18.0585C105.263 19.123 104.396 19.9904 103.331 19.9904C102.267 19.9904 101.399 19.123 101.399 18.0585Z"/>
+          </svg>
+
+          <span class="material-symbols-outlined">home</span><span>Vantage</span></a></li>
         <li><a id="bird-friend" title="Bird friends"><span class="material-symbols-outlined">raven</span><span>Bird friends</span></a></li>
         <li><a id="scary" title="Scary things"><span class="material-symbols-outlined">skull</span><span>Scary things</span></a></li>
         <li class="expands">
           <a id="games" title="Games"><span class="material-symbols-outlined">crossword</span><span>Games</span></a>
           <ul>
-            <li><a id="games_overview" title="Games overview"><span class="material-symbols-outlined">crossword</span><span>Overview</span></a></li>
             <li><a id="games_card" title="Card games"><span class="material-symbols-outlined">playing_cards</span><span>Card games</span></a></li>
             <li><a id="games_sports" title="Sports"><span class="material-symbols-outlined">sports_basketball</span><span>Sports</span></a></li>
             <li><a id="games_video" title="Video games"><span class="material-symbols-outlined">gamepad</span><span>Video games</span></a></li>
@@ -69,7 +78,6 @@
         <li class="expands">
           <a id="space" title="Space"><span class="material-symbols-outlined">rocket_launch</span><span>Space</span></a>
           <ul>
-            <li><a id="space_overview" title="Space overview"><span class="material-symbols-outlined">rocket_launch</span><span>Overview</span></a></li>
             <li><a id="space_orbits" title="Orbits"><span class="material-symbols-outlined">orbit</span><span>Orbits</span></a></li>
             <li><a id="space_planets" title="Planets"><span class="material-symbols-outlined">public</span><span>Planets</span></a></li>
             <li><a id="space_satellites" title="Satellites"><span class="material-symbols-outlined">satellite_alt</span><span>Satellites</span></a></li>
@@ -79,7 +87,6 @@
         <li class="expands">
           <a id="trucks" title="Trucks"><span class="material-symbols-outlined">fire_truck</span><span>Trucks</span></a>
           <ul>
-            <li><a id="trucks_overview" title="Trucks overview"><span class="material-symbols-outlined">local_shipping</span><span>Overview</span></a></li>
             <li><a id="trucks_firetrucks" title="Fire trucks"><span class="material-symbols-outlined">fire_truck</span><span>Fire trucks</span></a></li>
             <li><a id="trucks_monstertrucks" title="Monster trucks"><span class="material-symbols-outlined">agriculture</span><span>Monster trucks</span></a></li>
           </ul>
@@ -95,7 +102,7 @@
             <div id="environments">Environments</div>
             <a id="help-toggle"><span class="material-symbols-outlined">help</span></a>
           </div>
-          <div id="local">Home</div>
+          <div id="local">Vantage</div>
         </header>
         <div id="card">
           
@@ -308,9 +315,9 @@
       <header>Help</header>
 
       <div class="help-content">
-        <h3>Hoverable version</h3>
+        <h3>Combo home (without overviews) version</h3>
         
-        <p>Nav toggles from drawer to rail, with a hover effect on a delay which will reveal the full drawer. Selects the Overview item if you choose a grouped item in rail mode.</p>
+        <p>Nav toggles from drawer to rail, with a hover effect on a delay which will reveal the full drawer. Home option when open collapses into logo when closed. Selects the Overview item if you choose a grouped item in rail mode.</p>
  
         <h4>Other versions</h4>
         
@@ -318,13 +325,13 @@
           <a href="index.html">Toggleable</a>
         </p>
         <p>
+          <a href="hoverable.html">Hoverable</a>
+        </p>
+        <p>
           <a href="expandable.html">Expandable rail</a>
         </p>
         <p>
           <a href="combo-home.html">Combo home</a>
-        </p>
-        <p>
-          <a href="combo-home-no-overview.html">Combo home (no overviews)</a>
         </p>
  
         <h4>Fake help to show scrolling</h4>
